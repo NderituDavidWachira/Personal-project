@@ -1,0 +1,95 @@
+/* =======
+   CBT KENYA — MINIMAL SERVICE WORKER
+   Purpose: satisfy PWA installability requirements
+   (Chrome requires an active service worker before
+   it will fire the "beforeinstallprompt" event.)
+======= */
+
+const CACHE_NAME = "cbt-kenya-cache-v2";
+
+// Add any core files you want available offline.
+// Keep this list small to start — you can expand it later.
+// NOTE: only add files here once you've confirmed their
+// exact working URL (a 404 here breaks the whole install step).
+const CORE_ASSETS = [
+    "/"
+];
+
+
+/* =======
+   INSTALL — cache core assets
+======= */
+
+self.addEventListener("install", function (event) {
+
+    event.waitUntil(
+        caches.open(CACHE_NAME).then(function (cache) {
+            return cache.addAll(CORE_ASSETS);
+        })
+    );
+
+    // Activate this service worker immediately
+    self.skipWaiting();
+});
+
+
+/* =======
+   ACTIVATE — clean up old caches
+======= */
+
+self.addEventListener("activate", function (event) {
+
+    event.waitUntil(
+        caches.keys().then(function (cacheNames) {
+
+            return Promise.all(
+                cacheNames
+                    .filter(function (name) {
+                        return name !== CACHE_NAME;
+                    })
+                    .map(function (name) {
+                        return caches.delete(name);
+                    })
+            );
+        })
+    );
+
+    self.clients.claim();
+});
+
+
+/* =======
+   FETCH — serve from cache first, fall back to network
+======= */
+
+self.addEventListener("fetch", function (event) {
+
+    // Only handle GET requests
+    if (event.request.method !== "GET") {
+        return;
+    }
+
+    event.respondWith(
+        caches.match(event.request).then(function (cachedResponse) {
+
+            if (cachedResponse) {
+                return cachedResponse;
+            }
+
+            return fetch(event.request).catch(function () {
+
+                // Network failed and nothing is cached.
+                // Must still return a valid Response object,
+                // otherwise the browser throws a TypeError.
+                return new Response(
+                    "Offline and this resource isn't cached yet.",
+                    {
+                        status: 503,
+                        statusText: "Service Unavailable",
+                        headers: { "Content-Type": "text/plain" }
+                    }
+                );
+            });
+        })
+    );
+});

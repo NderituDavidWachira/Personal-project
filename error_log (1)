@@ -1,0 +1,419 @@
+[28-Sep-2026 09:53:46 UTC] KCB STK failed: The gateway rejected the request. | {"code":"404","type":"Status report","message":"Runtime Error","description":"No matching resource found for given API Request"}
+[28-Sep-2026 10:03:41 UTC] KCB STK failed: Bad Request - Invalid PhoneNumber | {
+                        "header": {
+                            "statusCode": "1",
+                            "statusDescription": "Bad Request - Invalid PhoneNumber"
+                        },
+                        "response": {}
+                    }
+[28-Sep-2026 10:03:58 UTC] KCB STK failed: Bad Request - Invalid PhoneNumber | {
+                        "header": {
+                            "statusCode": "1",
+                            "statusDescription": "Bad Request - Invalid PhoneNumber"
+                        },
+                        "response": {}
+                    }
+[28-Sep-2026 10:04:07 UTC] KCB STK failed: The gateway rejected the request. | {"code":"403","type":"Status report","message":"Runtime Error","description":"Transport error: 403 Error: Forbidden"}
+[28-Sep-2026 10:07:10 UTC] KCB STK failed: Merchant does not exist | {
+                        "header": {
+                            "statusCode": "1",
+                            "statusDescription": "Merchant does not exist"
+                        },
+                        "response": {}
+                    }
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 220-s691.lon1.mysecurecloudhost.com ESMTP Exim 4.100.1 #2 Mon, 28 Sep 2026 12:14:43 +0000 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: EHLO app.cbtkenya.org
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250-s691.lon1.mysecurecloudhost.com Hello app.cbtkenya.org [77.95.113.12]
+250-SIZE 104857600
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: AUTH LOGIN
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 235 Authentication succeeded
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MAIL FROM:<info@cbtkenya.org>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: RCPT TO:<admincbtkenya@gmail.com>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 Accepted
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: DATA
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Date: Mon, 28 Sep 2026 15:14:43 +0300
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: To: Rita <admincbtkenya@gmail.com>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: From: Skills Transfer Program <info@cbtkenya.org>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Reply-To: CBT-Kenya STP <info@cbtkenya.org>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Subject: Your OTP Verification Code
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Message-ID: <IWE0UPquG70eyokDuk0cERgCh7Fc6usWkOEQ2ZqY5Q@app.cbtkenya.org>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MIME-Version: 1.0
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: multipart/alternative;
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:  boundary="b1=_IWE0UPquG70eyokDuk0cERgCh7Fc6usWkOEQ2ZqY5Q"
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_IWE0UPquG70eyokDuk0cERgCh7Fc6usWkOEQ2ZqY5Q
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/plain; charset=us-ascii
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Hello Rita, Your OTP code is 580958. This code expires in 10 minutes.
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_IWE0UPquG70eyokDuk0cERgCh7Fc6usWkOEQ2ZqY5Q
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/html; charset=us-ascii
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         <div style='font-family:Arial,sans-serif'>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h2>Skills Transfer Program</h2>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Hello <b>Rita</b>,</p>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Your OTP code is:</p>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h1 style='color:#28a745'>580958</h1>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>This code expires in 10 minutes.</p>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p><b>Do not share this OTP with anyone.</b></p>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         </div>
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_IWE0UPquG70eyokDuk0cERgCh7Fc6usWkOEQ2ZqY5Q--
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: .
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK id=1xBAFn-0000000AKhT-1tuQ
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: QUIT
+[28-Sep-2026 15:14:43 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 221 s691.lon1.mysecurecloudhost.com closing connection
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 220-s691.lon1.mysecurecloudhost.com ESMTP Exim 4.100.1 #2 Mon, 28 Sep 2026 12:23:02 +0000 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: EHLO app.cbtkenya.org
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250-s691.lon1.mysecurecloudhost.com Hello app.cbtkenya.org [77.95.113.12]
+250-SIZE 104857600
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: AUTH LOGIN
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 235 Authentication succeeded
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MAIL FROM:<info@cbtkenya.org>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: RCPT TO:<achollagrace20@gmail.com>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 Accepted
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: DATA
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Date: Mon, 28 Sep 2026 15:23:02 +0300
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: To: Toni Morrison <achollagrace20@gmail.com>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: From: Skills Transfer Program <info@cbtkenya.org>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Reply-To: CBT-Kenya STP <info@cbtkenya.org>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Subject: Your OTP Verification Code
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Message-ID: <n6TuuuwMzRnnmb1ttfgCXbVlZr8JxSCKL3LhW8lbY@app.cbtkenya.org>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MIME-Version: 1.0
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: multipart/alternative;
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:  boundary="b1=_n6TuuuwMzRnnmb1ttfgCXbVlZr8JxSCKL3LhW8lbY"
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_n6TuuuwMzRnnmb1ttfgCXbVlZr8JxSCKL3LhW8lbY
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/plain; charset=us-ascii
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Hello Toni Morrison, Your OTP code is 878123. This code expires in 10 minutes.
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_n6TuuuwMzRnnmb1ttfgCXbVlZr8JxSCKL3LhW8lbY
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/html; charset=us-ascii
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         <div style='font-family:Arial,sans-serif'>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h2>Skills Transfer Program</h2>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Hello <b>Toni Morrison</b>,</p>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Your OTP code is:</p>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h1 style='color:#28a745'>878123</h1>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>This code expires in 10 minutes.</p>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p><b>Do not share this OTP with anyone.</b></p>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         </div>
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_n6TuuuwMzRnnmb1ttfgCXbVlZr8JxSCKL3LhW8lbY--
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: .
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK id=1xBANq-0000000AmNH-0rLu
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: QUIT
+[28-Sep-2026 15:23:02 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 221 s691.lon1.mysecurecloudhost.com closing connection
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 220-s691.lon1.mysecurecloudhost.com ESMTP Exim 4.100.1 #2 Mon, 28 Sep 2026 12:48:39 +0000 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: EHLO app.cbtkenya.org
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 250-s691.lon1.mysecurecloudhost.com Hello app.cbtkenya.org [77.95.113.12]
+250-SIZE 104857600
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: AUTH LOGIN
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 235 Authentication succeeded
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: MAIL FROM:<info@cbtkenya.org>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: RCPT TO:<admincbtkenya@gmail.com>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 250 Accepted
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: DATA
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Date: Mon, 28 Sep 2026 12:48:39 +0000
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: To: Rita Ora <admincbtkenya@gmail.com>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: From: Skills Transfer Program <info@cbtkenya.org>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Reply-To: CBT-Kenya STP <info@cbtkenya.org>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Subject: Your OTP Verification Code
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Message-ID: <5aWHGmvMEHXgUPY2QNDFtdpTYgPXygAUJr4qYp1H2QQ@app.cbtkenya.org>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: MIME-Version: 1.0
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: multipart/alternative;
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:  boundary="b1=_5aWHGmvMEHXgUPY2QNDFtdpTYgPXygAUJr4qYp1H2QQ"
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_5aWHGmvMEHXgUPY2QNDFtdpTYgPXygAUJr4qYp1H2QQ
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/plain; charset=us-ascii
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Hello Rita Ora, Your OTP code is 236276. This code expires in 10 minutes.
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_5aWHGmvMEHXgUPY2QNDFtdpTYgPXygAUJr4qYp1H2QQ
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/html; charset=us-ascii
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:         <div style='font-family:Arial,sans-serif'>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:             <h2>Skills Transfer Program</h2>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Hello <b>Rita Ora</b>,</p>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Your OTP code is:</p>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:             <h1 style='color:#28a745'>236276</h1>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>This code expires in 10 minutes.</p>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:             <p><b>Do not share this OTP with anyone.</b></p>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:         </div>
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_5aWHGmvMEHXgUPY2QNDFtdpTYgPXygAUJr4qYp1H2QQ--
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER:
+[28-Sep-2026 12:48:39 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: .
+[28-Sep-2026 12:48:40 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK id=1xBAmd-0000000C0LG-3RCy
+[28-Sep-2026 12:48:40 UTC] PHPMailer SMTP debug: CLIENT -> SERVER: QUIT
+[28-Sep-2026 12:48:40 UTC] PHPMailer SMTP debug: SERVER -> CLIENT: 221 s691.lon1.mysecurecloudhost.com closing connection
+[28-Sep-2026 12:48:56 UTC] PHP Warning:  Use of undefined constant user - assumed 'user' (this will throw an Error in a future version of PHP) in /home/cbtkenya/app.cbtkenya.org/index.php on line 264
+[30-Sep-2026 05:43:00 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:40 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:42 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:43 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:44 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:45 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 05:43:46 UTC] PHP Fatal error:  Uncaught PDOException: SQLSTATE[23000]: Integrity constraint violation: 1052 Column 'id' in SELECT is ambiguous in /home/cbtkenya/app.cbtkenya.org/Admin.php:114
+Stack trace:
+#0 /home/cbtkenya/app.cbtkenya.org/Admin.php(114): PDO->query('SELECT id, titl...')
+#1 {main}
+  thrown in /home/cbtkenya/app.cbtkenya.org/Admin.php on line 114
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 220-s691.lon1.mysecurecloudhost.com ESMTP Exim 4.100.1 #2 Wed, 30 Sep 2026 06:45:18 +0000 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: EHLO app.cbtkenya.org
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250-s691.lon1.mysecurecloudhost.com Hello app.cbtkenya.org [77.95.113.12]
+250-SIZE 104857600
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: AUTH LOGIN
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 235 Authentication succeeded
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MAIL FROM:<info@cbtkenya.org>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: RCPT TO:<dev@ryantech.co.ke>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 Accepted
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: DATA
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Date: Wed, 30 Sep 2026 09:45:18 +0300
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: To: David <dev@ryantech.co.ke>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: From: Skills Transfer Program <info@cbtkenya.org>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Reply-To: CBT-Kenya STP <info@cbtkenya.org>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Subject: Your OTP Verification Code
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Message-ID: <LSgLTotEPPCF5bOkGHEL0k6oyWmiHSSbFRb9FSYEJX8@app.cbtkenya.org>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MIME-Version: 1.0
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: multipart/alternative;
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:  boundary="b1=_LSgLTotEPPCF5bOkGHEL0k6oyWmiHSSbFRb9FSYEJX8"
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_LSgLTotEPPCF5bOkGHEL0k6oyWmiHSSbFRb9FSYEJX8
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/plain; charset=us-ascii
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Hello David, Your OTP code is 353448. This code expires in 10 minutes.
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_LSgLTotEPPCF5bOkGHEL0k6oyWmiHSSbFRb9FSYEJX8
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/html; charset=us-ascii
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         <div style='font-family:Arial,sans-serif'>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h2>Skills Transfer Program</h2>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Hello <b>David</b>,</p>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Your OTP code is:</p>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h1 style='color:#28a745'>353448</h1>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>This code expires in 10 minutes.</p>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p><b>Do not share this OTP with anyone.</b></p>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         </div>
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_LSgLTotEPPCF5bOkGHEL0k6oyWmiHSSbFRb9FSYEJX8--
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 09:45:18 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: .
+[30-Sep-2026 09:45:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK id=1xBo47-00000002bLm-401f
+[30-Sep-2026 09:45:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: QUIT
+[30-Sep-2026 09:45:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 221 s691.lon1.mysecurecloudhost.com closing connection
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 220-s691.lon1.mysecurecloudhost.com ESMTP Exim 4.100.1 #2 Wed, 30 Sep 2026 07:36:19 +0000 
+220-We do not authorize the use of this system to transport unsolicited, 
+220 and/or bulk e-mail.
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: EHLO app.cbtkenya.org
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250-s691.lon1.mysecurecloudhost.com Hello app.cbtkenya.org [77.95.113.12]
+250-SIZE 104857600
+250-LIMITS MAILMAX=1000 RCPTMAX=50000
+250-8BITMIME
+250-PIPELINING
+250-PIPECONNECT
+250-AUTH PLAIN LOGIN
+250 HELP
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: AUTH LOGIN
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 VXNlcm5hbWU6
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 334 UGFzc3dvcmQ6
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: [credentials hidden]
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 235 Authentication succeeded
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MAIL FROM:<info@cbtkenya.org>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: RCPT TO:<dev@ryantech.co.ke>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 Accepted
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: DATA
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 354 Enter message, ending with "." on a line by itself
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Date: Wed, 30 Sep 2026 10:36:19 +0300
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: To: David <dev@ryantech.co.ke>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: From: Skills Transfer Program <info@cbtkenya.org>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Reply-To: CBT-Kenya STP <info@cbtkenya.org>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Subject: Your OTP Verification Code
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Message-ID: <ov8ACjIiStUA0Tz2REGkYrPzkMi2XuGO7hEixRGOrq8@app.cbtkenya.org>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: X-Mailer: PHPMailer 7.0.2 (https://github.com/PHPMailer/PHPMailer)
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: MIME-Version: 1.0
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: multipart/alternative;
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:  boundary="b1=_ov8ACjIiStUA0Tz2REGkYrPzkMi2XuGO7hEixRGOrq8"
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Transfer-Encoding: 8bit
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_ov8ACjIiStUA0Tz2REGkYrPzkMi2XuGO7hEixRGOrq8
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/plain; charset=us-ascii
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Hello David, Your OTP code is 508529. This code expires in 10 minutes.
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_ov8ACjIiStUA0Tz2REGkYrPzkMi2XuGO7hEixRGOrq8
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: Content-Type: text/html; charset=us-ascii
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         <div style='font-family:Arial,sans-serif'>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h2>Skills Transfer Program</h2>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Hello <b>David</b>,</p>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>Your OTP code is:</p>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <h1 style='color:#28a745'>508529</h1>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p>This code expires in 10 minutes.</p>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:             <p><b>Do not share this OTP with anyone.</b></p>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:         </div>
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: --b1=_ov8ACjIiStUA0Tz2REGkYrPzkMi2XuGO7hEixRGOrq8--
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER:
+[30-Sep-2026 10:36:19 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: .
+[30-Sep-2026 10:36:20 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 250 OK id=1xBorV-00000005Bzj-1kPL
+[30-Sep-2026 10:36:20 Africa/Nairobi] PHPMailer SMTP debug: CLIENT -> SERVER: QUIT
+[30-Sep-2026 10:36:20 Africa/Nairobi] PHPMailer SMTP debug: SERVER -> CLIENT: 221 s691.lon1.mysecurecloudhost.com closing connection

@@ -1,0 +1,30 @@
+{
+  "name": "CBT Kenya",
+  "short_name": "CBT Kenya",
+  "start_url": "/",
+  "display": "standalone",
+  "theme_color": "#000000",
+  "background_color": "#ffffff",
+  "id": "cbtkenya.app",
+  "description": "Skills Transfer Program",
+  "icons": [
+    {
+      "src": "/icons/cbt-ke.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/cbt-ke.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/cbt-ke-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ]
+}

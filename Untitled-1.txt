@@ -1,0 +1,328 @@
+<?php
+session_start();
+include "db.php";
+
+/* ===
+   LOGIN CHECK
+=== */
+if (!isset($_SESSION['user_id'])) {
+    header("Location: index.php");
+    exit;
+}
+
+$user_id = (int)$_SESSION['user_id'];
+
+/* ===
+   CSRF TOKEN
+=== */
+if (empty($_SESSION['csrf_token'])) {
+    $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
+}
+
+/* ===
+   COURSE ID
+=== */
+$course_id = isset($_GET['course_id'])
+    ? (int)$_GET['course_id']
+    : 0;
+
+if ($course_id <= 0) {
+    die("Invalid course.");
+}
+
+/* ===
+   GET COURSE
+=== */
+$stmt = $pdo->prepare("
+    SELECT *
+    FROM courses
+    WHERE id = ?
+    LIMIT 1
+");
+$stmt->execute([$course_id]);
+$course = $stmt->fetch();
+
+if (!$course) {
+    die("Course not found.");
+}
+
+/* ===
+   CHECK USER EXISTS + GET DETAILS FOR PAYER RECORD
+=== */
+$stmt = $pdo->prepare("
+    SELECT id, full_name, email
+    FROM users
+    WHERE id = ?
+    LIMIT 1
+");
+$stmt->execute([$user_id]);
+$userRow = $stmt->fetch();
+
+if (!$userRow) {
+    die("User account not found.");
+}
+
+$payerName  = $userRow['full_name'] ?? 'Unknown';
+$payerEmail = $userRow['email'] ?? null;
+
+/* ===
+   CHECK ALREADY ENROLLED
+=== */
+$stmt = $pdo->prepare("
+    SELECT id, status
+    FROM enrollments
+    WHERE user_id = ?
+    AND course_id = ?
+    LIMIT 1
+");
+$stmt->execute([$user_id, $course_id]);
+$existingEnrollment = $stmt->fetch();
+
+if ($existingEnrollment) {
+    header("Location: course1.php?id=" . $course_id);
+    exit;
+}
+
+/* ===
+   FREE COURSE
+=== */
+if ((float)$course['price'] <= 0) {
+
+    $pdo->beginTransaction();
+
+    try {
+
+        $check = $pdo->prepare("
+            SELECT id
+            FROM enrollments
+            WHERE user_id = ?
+            AND course_id = ?
+            LIMIT 1
+        ");
+        $check->execute([$user_id, $course_id]);
+
+        if ($check->rowCount() > 0) {
+            $pdo->rollBack();
+            header("Location: course1.php?id=" . $course_id);
+            exit;
+        }
+
+        $stmt = $pdo->prepare("
+            INSERT INTO enrollments
+            (user_id, course_id, progress, status, enrolled_at)
+            VALUES (?, ?, 0, 'ongoing', NOW())
+        ");
+        $stmt->execute([$user_id, $course_id]);
+
+        $stmt = $pdo->prepare("
+            UPDATE courses
+            SET enrolled_students = COALESCE(enrolled_students,0) + 1
+            WHERE id = ?
+        ");
+        $stmt->execute([$course_id]);
+
+        $pdo->commit();
+
+        $_SESSION['success'] = "Successfully enrolled in course.";
+
+        header("Location: course1.php?id=" . $course_id);
+        exit;
+
+    } catch (Exception $e) {
+        $pdo->rollBack();
+        die("Enrollment Error: " . htmlspecialchars($e->getMessage()));
+    }
+}
+
+/* ===
+   PAID COURSE  START M-PESA STK PUSH
+=== */
+$errorMessage = null;
+
+if (isset($_POST['pay'])) {
+
+    if (
+        !isset($_POST['csrf_token']) ||
+        !hash_equals($_SESSION['csrf_token'], $_POST['csrf_token'])
+    ) {
+        $errorMessage = "Your session expired. Please refresh the page and try again.";
+    }
+
+    $phone = trim($_POST['phone'] ?? '');
+
+    if (!$errorMessage) {
+        $digits = preg_replace('/\D/', '', $phone);
+
+        if (preg_match('/^0(7|1)\d{8}$/', $digits)) {
+            $digits = '254' . substr($digits, 1);
+        } elseif (preg_match('/^(7|1)\d{8}$/', $digits)) {
+            $digits = '254' . $digits;
+        }
+
+        if (!preg_match('/^254(7|1)\d{8}$/', $digits)) {
+            $errorMessage = "Enter a valid M-Pesa phone number, e.g. 0712345678.";
+        } else {
+            $phone = $digits;
+        }
+    }
+
+    $consumerKey       = "y0qEUVbGIQfqB00AYbhRRAnh8tVaLtSIEUKKcvTIIqmUymiI";
+    $consumerSecret    = "S1tkqQyWKbEmAo7kbhtauRcJiXJ8xlDk06b0XKtpvqJ6RTxJzxsRCYs7OwGb7SMa";
+    $BusinessShortCode = "174379";
+    $Passkey           = "bfb279f9aa9bdbcf158e97dd71a467cd2e0c893059b10f78e6b72ada1ed2c919";
+    $callbackURL       = "https://learning-system.infinityfreeapp.com/mpesa_callback.php";
+
+    if (!$errorMessage && (
+        !$consumerKey || !$consumerSecret || !$BusinessShortCode || !$Passkey || !$callbackURL
+    )) {
+        error_log("M-Pesa config missing one or more hardcoded values.");
+        $errorMessage = "Payments are temporarily unavailable. Please contact support.";
+    }
+
+    if (!$errorMessage) {
+
+        $amount = (int) round((float)$course['price']);
+
+        /* ACCESS TOKEN */
+        $credentials = base64_encode($consumerKey . ":" . $consumerSecret);
+
+        $ch = curl_init(
+            "https://sandbox.safaricom.co.ke/oauth/v1/generate?grant_type=client_credentials"
+        );
+        curl_setopt($ch, CURLOPT_HTTPHEADER, ["Authorization: Basic " . $credentials]);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 15);
+
+        /* ===== DEBUG BLOCK START ===== */
+        $rawTokenResponse = curl_exec($ch);
+        $tokenCurlErr     = curl_error($ch);
+        $tokenCurlErrno   = curl_errno($ch);
+        $tokenHttpCode    = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+        curl_close($ch);
+
+        $tokenResponse = json_decode($rawTokenResponse);
+
+        if (!isset($tokenResponse->access_token)) {
+            error_log("MPESA token error: " . $tokenCurlErr);
+            $errorMessage = "TOKEN DEBUG → errno: $tokenCurlErrno | curl_error: " .
+                ($tokenCurlErr ?: 'none') . " | http_code: $tokenHttpCode | raw: " .
+                htmlspecialchars(substr((string)$rawTokenResponse, 0, 300));
+        } else {
+        /* ===== DEBUG BLOCK END ===== */
+            $access_token = $tokenResponse->access_token;
+            $timestamp = date("YmdHis");
+            $password  = base64_encode($BusinessShortCode . $Passkey . $timestamp);
+
+            $accountRef = substr("COURSE" . $course_id, 0, 12);
+            $transDesc  = "Course Pay";
+
+            $stkData = [
+                "BusinessShortCode" => $BusinessShortCode,
+                "Password"          => $password,
+                "Timestamp"         => $timestamp,
+                "TransactionType"   => "CustomerPayBillOnline",
+                "Amount"            => $amount,
+                "PartyA"            => $phone,
+                "PartyB"            => $BusinessShortCode,
+                "PhoneNumber"       => $phone,
+                "CallBackURL"       => $callbackURL,
+                "AccountReference"  => $accountRef,
+                "TransactionDesc"   => $transDesc,
+            ];
+
+            $ch = curl_init(
+                "https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest"
+            );
+            curl_setopt($ch, CURLOPT_HTTPHEADER, [
+                "Content-Type: application/json",
+                "Authorization: Bearer " . $access_token,
+            ]);
+            curl_setopt($ch, CURLOPT_POST, true);
+            curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($stkData));
+            curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+            curl_setopt($ch, CURLOPT_TIMEOUT, 20);
+
+            $result   = curl_exec($ch);
+            $curlErr  = curl_error($ch);
+            curl_close($ch);
+            $resultData = json_decode($result, true);
+
+            if ($curlErr || empty($resultData['CheckoutRequestID'])) {
+                error_log("MPESA STK push error: " . $curlErr . " | Payload: " . json_encode($stkData) . " | Response: " . $result);
+                $errorMessage = "We couldn't start the M-Pesa payment. Please try again.";
+            } else {
+                try {
+                    $stmt = $pdo->prepare("
+                        INSERT INTO payments
+                        (user_id, course_id, payer_name, payer_phone, payer_email, amount, payment_method, checkout_request_id, merchant_request_id, status)
+                        VALUES (?, ?, ?, ?, ?, ?, 'mpesa', ?, ?, 'pending')
+                    ");
+                    $stmt->execute([
+                        $user_id,
+                        $course_id,
+                        $payerName,
+                        $phone,
+                        $payerEmail,
+                        $amount,
+                        $resultData['CheckoutRequestID'],
+                        $resultData['MerchantRequestID'],
+                    ]);
+
+                    $_SESSION['pending_checkout_id'] = $resultData['CheckoutRequestID'];
+                    header("Location: Pending_payment.php?course_id=" . $course_id);
+                    exit;
+
+                } catch (PDOException $e) {
+                    error_log("Failed to save pending payment: " . $e->getMessage());
+                    $errorMessage = "Payment was started but we couldn't save the record. Contact support.";
+                }
+            }
+        }
+    }
+}
+?>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Enroll - <?= htmlspecialchars($course['title']) ?></title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+        body { min-height: 100vh; display: flex; justify-content: center; align-items: center; padding: 30px; background: #f1f5f9; }
+        .card { width: 100%; max-width: 480px; background: #ffffff; border-radius: 16px; padding: 32px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08); border: 1px solid #e2e8f0; }
+        .card h2 { color: #1e293b; margin-bottom: 12px; font-size: 24px; }
+        .card p { color: #64748b; line-height: 1.6; margin-bottom: 10px; }
+        .price { display: inline-block; margin-top: 8px; color: #2563eb; font-size: 26px; font-weight: 700; }
+        hr { border: none; height: 1px; background: #e2e8f0; margin: 22px 0; }
+        label { display: block; margin-bottom: 6px; color: #334155; font-weight: 600; font-size: 14px; }
+        input { width: 100%; padding: 12px 14px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 15px; outline: none; }
+        input:focus { border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15); }
+        .btn { display: block; width: 100%; padding: 13px; margin-top: 14px; border: none; border-radius: 8px; background: #2563eb; color: #fff; font-size: 15px; font-weight: 600; cursor: pointer; text-decoration: none; text-align: center; }
+        .btn:hover { background: #1d4ed8; }
+        .alert { padding: 12px 14px; border-radius: 8px; margin-bottom: 16px; font-size: 14px; }
+        .alert-error { background: #fef2f2; color: #991b1b; border: 1px solid #fecaca; }
+    </style>
+</head>
+<body>
+<div class="card">
+    <h2><?= htmlspecialchars($course['title']) ?></h2>
+    <p><?= htmlspecialchars($course['description']) ?></p>
+    <p>Price: <span class="price">KES <?= number_format((float)$course['price']) ?></span></p>
+    <p>Instructor: <?= htmlspecialchars($course['instructor'] ?? 'N/A') ?></p>
+    <hr>
+    <?php if ($errorMessage) { ?>
+        <div class="alert alert-error"><?= htmlspecialchars($errorMessage) ?></div>
+    <?php } ?>
+    <?php if ((float)$course['price'] > 0) { ?>
+        <form method="POST">
+            <input type="hidden" name="csrf_token" value="<?= htmlspecialchars($_SESSION['csrf_token']) ?>">
+            <label>Phone Number (e.g. 0712345678)</label>
+            <input type="text" name="phone" placeholder="0712345678" required>
+            <button type="submit" name="pay" class="btn">Pay with M-Pesa &amp; Enroll</button>
+        </form>
+    <?php } else { ?>
+        <a href="?course_id=<?= $course_id ?>" class="btn">Enroll for Free</a>
+    <?php } ?>
+</div>
+</body>
+</html>
