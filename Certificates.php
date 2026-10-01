@@ -1,5 +1,4 @@
 <?php
-/** Certificate helpers */
 
 function strip_cert_prefix(string $title): string
 {
